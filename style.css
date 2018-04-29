@@ -1,0 +1,264 @@
+@font-face {
+    font-family: "neuropol";
+    src: url("jetfont/neuropol.ttf")
+}
+
+html {
+    background: radial-gradient(50% 100%, rgba(255, 255, 255, .2), rgba(255, 255, 255, 0)),
+    linear-gradient(90deg, rgba(50, 100, 170, .7) 1px, transparent 0),
+    linear-gradient(180deg, rgba(50, 100, 170, .7) 1px, transparent 0),
+    linear-gradient(90deg, rgba(50, 100, 170, .4) 1px, transparent 0),
+    linear-gradient(180deg, rgba(50, 100, 170, .4) 1px, transparent 0),
+    linear-gradient(90deg, rgba(50, 100, 170, 1) 2px, transparent 0),
+    linear-gradient(180deg, rgba(50, 100, 170, 1) 2px, transparent 0);
+
+    background-color: #074b97;
+
+    background-size: 100% 100%,
+    50px 50px,
+    50px 50px,
+    25px 25px,
+    25px 25px,
+    100px 100px,
+    100px 100px;
+
+    background-attachment: local;
+
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0 !important;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+}
+
+/*  INFOS  */
+
+#infos {
+    border-top: 20px solid #ffffff;
+    border-left: 20px solid #ffffff;
+    border-bottom-style: groove;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 45vh;
+    width: 33vw;
+    font-family: 'neuropol';
+
+}
+
+#infos .header {
+    padding-left: 2vw;
+    display: flex;
+    align-items: center;
+    border-bottom: 20px solid #ffffff;
+}
+
+@-webkit-keyframes typing {
+    to {
+        width: calc(29px * 6);
+    }
+}
+
+@-webkit-keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+#infos > .header > h1 {
+    /*font-family: Arial;*/
+    font: bold 2em neuropol;
+    color: #ffffff;
+    width: 0;
+    letter-spacing: 3px;
+    border-right: .1em solid #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: scale(3) translateX(-2vw) translateY(-12vh);
+}
+
+#infos > .header > .animate-title {
+    /*font-family: Arial;*/
+    width: calc(29px * 6);
+    transition: all 1s steps(6, end) 2s;
+    animation: blink-caret .5s step-end infinite alternate;
+}
+
+#infos > .header > .animate2-title {
+    width: calc(29px * 6);
+    transition: all 1s ease-in-out;
+    transform: scale(1) translateX(0) translateY(0);
+    border: none;
+}
+
+#infos > .content {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    text-align: justify;
+    font-size: 1.4em;
+}
+
+#services {
+    visibility: hidden;
+    font-size: 2em;
+    text-decoration: underline;
+    transition: all 0.5s;
+    transition-delay: 1.5s;
+    opacity: 0;
+    color: white;
+}
+
+svg {
+    width: 100vw;
+    height: 100vh;
+}
+
+/*  JETDEV LOGO  */
+
+#plane {
+    fill: none;
+}
+
+#plane path {
+    transform: scale(1.6) translateY(-11vh) translateX(-8vw);
+    stroke: rgba(255, 255, 255, 1);
+    fill: rgba(255, 255, 255, 0);
+    stroke-width: 2px;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    animation-name: draw;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+@keyframes draw {
+    0% {
+        fill: rgba(255, 255, 255, 0);
+        stroke-dasharray: 100%;
+        stroke: rgba(255, 255, 255, 1);
+        stroke-dashoffset: 100%;
+    }
+
+    85% {
+        fill: rgba(255, 255, 255, 0);
+        stroke-dasharray: 0;
+        stroke: rgba(255, 255, 255, 1);
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        fill: rgba(255, 255, 255, 1);
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+
+/*  JETDEV LOGO CUTTED */
+
+#cut-plane {
+    display: none;
+}
+
+#cut-plane #cutted-plane-group {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1.4) translateX(-8vw) translateY(-5vh);
+    transition: all 0.5s ease-in-out;
+    animation: plane-appear 2s ease-in-out;
+}
+
+@keyframes plane-appear {
+    0% {
+        transform: scale(1) translateX(-8vw) translateY(-5vh);
+    }
+
+    50% {
+        transform: scale(2.5) translateX(-8vw) translateY(-5vh);
+    }
+
+    100% {
+        transform: scale(1.5) translateX(-8vw) translateY(-5vh);
+    }
+}
+
+#cut-plane .animate-plane1 {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.reactors {
+    transition: all 2s linear;
+    position: relative;
+}
+
+.reactors > path {
+}
+
+.wings {
+}
+
+.cokpit {
+}
+
+.white {
+    fill: #FFFFFF;
+}
+
+.jetblue {
+    fill: #162F63;
+}
+
+#cut-plane > g > g > circle {
+    visibility: hidden;
+    stroke-width: 6;
+    stroke-dasharray: 0%, 100%;
+    transition: all 1s linear;
+    transition-delay: 1.5s;
+}
+
+@keyframes fill {
+    0% {
+        stroke-dasharray: 0%, 100%;
+    }
+
+    100% {
+        stroke-dasharray: 100%, 0%;
+    }
+}
+
+.animated1-circle {
+    visibility: visible;
+    stroke-dasharray: 100%, 0;
+}
+
+.animated1-circle2 {
+    visibility: visible;
+    stroke-dasharray: 100%, 0;
+}
+
+#wings-cokpit {
+    transition: all 1s;
+}
+
+.animated1-wings-cokpit {
+    transform: translateX(40%) translateY(30%);
+}
+
+.aminate {
+    transform-origin: 50% 50%;
+    transform: translateX(-50%) translateY(-95%) rotateZ(41deg) scale(1.5);
+}
+
+.show-service {
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: white;
+}
