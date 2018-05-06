@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "neuropol";
+    src: url("../jetfont/neuropol.ttf")
+}
+
+html {
+    background: radial-gradient(50% 100%, rgba(255, 255, 255, .2), rgba(255, 255, 255, 0)),
+    linear-gradient(90deg, rgba(50, 100, 170, .7) 1px, transparent 0),
+    linear-gradient(180deg, rgba(50, 100, 170, .7) 1px, transparent 0),
+    linear-gradient(90deg, rgba(50, 100, 170, .4) 1px, transparent 0),
+    linear-gradient(180deg, rgba(50, 100, 170, .4) 1px, transparent 0),
+    linear-gradient(90deg, rgba(50, 100, 170, 1) 2px, transparent 0),
+    linear-gradient(180deg, rgba(50, 100, 170, 1) 2px, transparent 0);
+
+    background-color: #074b97;
+
+    background-size: 100% 100%,
+    50px 50px,
+    50px 50px,
+    25px 25px,
+    25px 25px,
+    100px 100px,
+    100px 100px;
+
+    background-attachment: local;
+
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0 !important;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+}
+
+/*****  INFOS  *****/
+
+#infos {
+    border-top: 20px solid #ffffff;
+    border-left: 20px solid #ffffff;
+    border-bottom-style: groove;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 45vh;
+    width: 33vw;
+    font-family: 'neuropol';
+
+}
+
+#infos .header {
+    padding-left: 2vw;
+    display: flex;
+    align-items: center;
+    border-bottom: 20px solid #ffffff;
+}
+
+@-webkit-keyframes typing {
+    to {
+        width: calc(29px * 6);
+    }
+}
+
+@-webkit-keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+#infos > .header > h1 {
+    /*font-family: Arial;*/
+    font: bold 2em neuropol;
+    color: #ffffff;
+    width: 0;
+    letter-spacing: 3px;
+    border-right: .1em solid #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: scale(3) translateX(-2vw) translateY(-12vh);
+}
+
+#infos > .header > .animate-title {
+    /*font-family: Arial;*/
+    width: calc(29px * 6);
+    transition: all 1s steps(6, end) 2s;
+    animation: blink-caret .5s step-end infinite alternate;
+}
+
+#infos > .header > .animate2-title {
+    width: calc(29px * 6);
+    transition: all 1s ease-in-out;
+    transform: scale(1) translateX(0) translateY(0);
+    border: none;
+}
+
+#infos > .content {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    text-align: justify;
+    font-size: 1.4em;
+}
+
+svg {
+    width: 100vw;
+    height: 100vh;
+}

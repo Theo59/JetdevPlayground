@@ -10,8 +10,8 @@ window.onload = () => {
         const title = document.getElementById('title');
 
 
-        // cuttedPlane.classList.add('animate-plane1');
-        // plane.classList.add('plane-enter');
+        cuttedPlane.classList.add('animate-plane1');
+        plane.classList.add('plane-enter');
 
         title.classList.add('animate-title');
 

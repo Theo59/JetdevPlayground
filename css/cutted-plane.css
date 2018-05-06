@@ -1,0 +1,94 @@
+/*  JETDEV LOGO CUTTED */
+
+#cut-plane {
+    display: none;
+}
+
+#cut-plane #cutted-plane-group {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1.4) translateX(-8vw) translateY(-5vh);
+    transition: all 0.5s ease-in-out;
+    animation: plane-appear 2s ease-in-out;
+}
+
+#cut-plane .animate-plane1 {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/*****  PLANE COMPONENTS  *****/
+
+.reactors {
+    transition: all 2s linear;
+    position: relative;
+}
+
+.reactors > path {
+}
+
+.wings {
+}
+
+.cokpit {
+}
+
+#cut-plane > g > g > circle {
+    visibility: hidden;
+    stroke-width: 6;
+    stroke-dasharray: 0%, 100%;
+    transition: all 1s linear;
+    transition-delay: 1.5s;
+}
+
+#wings-cokpit {
+    transition: all 1s;
+}
+
+/*****  ANIMATIONS IDs AND CLASS *****/
+
+.animated1-wings-cokpit {
+    transform: translateX(40%) translateY(30%);
+}
+
+.aminate {
+    transform-origin: 50% 50%;
+    transform: translateX(-50%) translateY(-95%) rotateZ(41deg) scale(1.5);
+}
+
+.animated1-circle {
+    visibility: visible;
+    stroke-dasharray: 100%, 0;
+}
+
+.animated1-circle2 {
+    visibility: visible;
+    stroke-dasharray: 100%, 0;
+}
+
+/*****  ANIMATIONS  *****/
+
+@keyframes plane-appear {
+    0% {
+        transform: scale(1) translateX(-8vw) translateY(-5vh);
+    }
+
+    50% {
+        transform: scale(2.5) translateX(-8vw) translateY(-5vh);
+    }
+
+    100% {
+        transform: scale(1.5) translateX(-8vw) translateY(-5vh);
+    }
+}
+
+
+@keyframes fill {
+    0% {
+        stroke-dasharray: 0%, 100%;
+    }
+
+    100% {
+        stroke-dasharray: 100%, 0%;
+    }
+}

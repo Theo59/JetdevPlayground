@@ -1,0 +1,42 @@
+/*****  JETDEV LOGO  *****/
+
+#plane {
+    fill: none;
+}
+
+#plane path {
+    transform: scale(1.6) translateY(-11vh) translateX(-8vw);
+    stroke: rgba(255, 255, 255, 1);
+    fill: rgba(255, 255, 255, 0);
+    stroke-width: 2px;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    animation-name: draw;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+/*****  ANIMATIONS  *****/
+
+@keyframes draw {
+    0% {
+        fill: rgba(255, 255, 255, 0);
+        stroke-dasharray: 100%;
+        stroke: rgba(255, 255, 255, 1);
+        stroke-dashoffset: 100%;
+    }
+
+    85% {
+        fill: rgba(255, 255, 255, 0);
+        stroke-dasharray: 0;
+        stroke: rgba(255, 255, 255, 1);
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        fill: rgba(255, 255, 255, 1);
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
