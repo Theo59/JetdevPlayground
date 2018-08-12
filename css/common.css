@@ -41,8 +41,8 @@ body {
 /*****  INFOS  *****/
 
 #infos {
-    border-top: 20px solid #ffffff;
-    border-left: 20px solid #ffffff;
+    border-top: 17px solid #ffffff;
+    border-left: 17px solid #ffffff;
     border-bottom-style: groove;
     position: fixed;
     bottom: 0;
@@ -50,6 +50,7 @@ body {
     height: 45vh;
     width: 33vw;
     font-family: 'neuropol';
+    transition: all 0.3s ease-in-out;
 
 }
 
@@ -57,7 +58,7 @@ body {
     padding-left: 2vw;
     display: flex;
     align-items: center;
-    border-bottom: 20px solid #ffffff;
+    border-bottom: 17px solid #ffffff;
 }
 
 @-webkit-keyframes typing {
@@ -73,7 +74,6 @@ body {
 }
 
 #infos > .header > h1 {
-    /*font-family: Arial;*/
     font: bold 2em neuropol;
     color: #ffffff;
     width: 0;
@@ -81,11 +81,10 @@ body {
     border-right: .1em solid #ffffff;
     white-space: nowrap;
     overflow: hidden;
-    transform: scale(3) translateX(-2vw) translateY(-12vh);
+    transform: scale(3) translateX(-8vw) translateY(-17vh);
 }
 
 #infos > .header > .animate-title {
-    /*font-family: Arial;*/
     width: calc(29px * 6);
     transition: all 1s steps(6, end) 2s;
     animation: blink-caret .5s step-end infinite alternate;
@@ -109,3 +108,93 @@ svg {
     width: 100vw;
     height: 100vh;
 }
+
+/*****  RESPONSIVE  *****/
+
+@media (min-width: 1250px) and (max-width: 1450px) {
+    #infos {
+        height: 40vh;
+        width: 40vw;
+    }
+
+    #infos > .header > h1 {
+        transform: scale(3) translateX(-5vw) translateY(-18vh);
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1250px) {
+    #infos {
+        height: 40vh;
+        width: 40vw;
+    }
+
+    #infos > .header > h1 {
+        transform: scale(3) translateX(-5vw) translateY(-18vh);
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+    #infos {
+        height: 30vh;
+        width: 60vw;
+    }
+
+    #infos > .header > h1 {
+        transform: scale(3) translateX(1vw) translateY(-21vh);
+        font: bold 1.6em neuropol;
+    }
+
+    #infos > .header > .animate-title {
+        width: calc(24px * 6);
+        transition: all 1s steps(6, end) 2s;
+        animation: blink-caret .5s step-end infinite alternate;
+    }
+}
+
+@media (min-width: 420px) and (max-width: 720px) {
+    #infos {
+        height: 31vh;
+        width: 95vw;
+        border-right: 17px solid #FFFFFF;
+    }
+
+    #infos > .header > h1 {
+        transform: scale(3) translateX(12vw) translateY(-21vh);
+    }
+}
+
+
+@media (max-width: 420px) {
+    #infos {
+        height: 30vh;
+        width: 92vw;
+        border-right: 17px solid #FFFFFF;
+    }
+
+    #infos > .header > h1 {
+        font: bold 1.4em neuropol;
+        transform: scale(3) translateX(11vw) translateY(-21vh);
+    }
+
+    #infos .header {
+        height: 7vh;
+    }
+
+    #infos > .content {
+        font-size: 1em;
+    }
+
+    #infos > .header > .animate-title {
+        width: calc(17px * 6);
+    }
+
+    #infos > .header > .animate2-title {
+        width: calc(17px * 6);
+    }
+
+    #infos > .header > h1 {
+        font: bold 1.1em neuropol;
+    }
+}
+
+

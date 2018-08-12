@@ -35,7 +35,7 @@
 
 #cut-plane > g > g > circle {
     visibility: hidden;
-    stroke-width: 6;
+    stroke-width: 6px;
     stroke-dasharray: 0%, 100%;
     transition: all 1s linear;
     transition-delay: 1.5s;

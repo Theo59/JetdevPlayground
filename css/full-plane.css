@@ -5,7 +5,7 @@
 }
 
 #plane path {
-    transform: scale(1.6) translateY(-11vh) translateX(-8vw);
+    transform: scale(1.4) translateY(16vh) translateX(-6vw);
     stroke: rgba(255, 255, 255, 1);
     fill: rgba(255, 255, 255, 0);
     stroke-width: 2px;
@@ -40,3 +40,37 @@
         stroke: rgba(255, 255, 255, 0);
     }
 }
+
+/*****  RESPONSIVE  *****/
+
+@media (min-width: 1250px) and (max-width: 1450px) {
+    #plane path {
+        transform: scale(1.4) translateY(16vh) translateX(-6vw);
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1250px) {
+    #plane path {
+        transform: scale(1.4) translateY(16vh) translateX(-4vw);
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+    #plane path {
+        transform: scale(1) translateY(18vh) translateX(22vw);
+    }
+}
+
+@media (max-width: 720px) {
+    #plane path {
+        transform: scale(1.4) translateY(2vh) translateX(13vw);
+    }
+}
+
+@media (max-width: 420px) {
+    #plane path {
+        transform: scale(1.5) translateY(-2vh) translateX(15vw);
+    }
+}
+
+

@@ -1,25 +1,6 @@
 window.onload = () => {
 
-    // animateServices();
-
-    animateHome();
-
-    function animateHome() {
-        const cuttedPlane = document.getElementById('cutted-plane-group');
-        const plane = document.getElementById('plane');
-        const title = document.getElementById('title');
-
-
-        cuttedPlane.classList.add('animate-plane1');
-        plane.classList.add('plane-enter');
-
-        title.classList.add('animate-title');
-
-        setTimeout(() => {
-            title.classList.remove('animate-title');
-            title.classList.add('animate2-title');
-        }, 4000)
-    }
+    animateServices();
 
     function animateServices () {
 
